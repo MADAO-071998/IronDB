@@ -5,3 +5,5 @@ struct DynamicArray {
 };
 
 void init(struct DynamicArray *arr);
+
+void push_back(struct DynamicArray *arr, int value);
