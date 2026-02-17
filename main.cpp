@@ -11,8 +11,12 @@ int main() {
         push_back(&arr, i);
     }
 
+    // for (int i = 0; i < arr.size; i++) {
+    //     printf("%d ", arr.data[i]);
+    // }
+
     for (int i = 0; i < arr.size; i++) {
-        printf("%d ", arr.data[i]);
+        printf("%d ", get(&arr, i));
     }
 
     printf("\n");

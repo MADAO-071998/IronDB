@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "dynamic_array.h"
 
@@ -22,4 +23,13 @@ void push_back(struct DynamicArray *arr, int value) {
 
   arr->data[arr->size] = value;
   arr->size++;
+}
+
+int get(struct DynamicArray *arr, int index) {
+    if (index < 0 || index >= arr->size) {
+        printf("Index out of bounds\n");
+        exit(1);
+    }
+
+    return arr->data[index];
 }
