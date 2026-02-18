@@ -21,7 +21,9 @@ int main() {
 
     printf("\n");
 
-    free(arr.data);  // free allocated memory
+    free_array(&arr);  // free allocated memory
 
     return 0;
 }
+
+// g++ main.cpp dynamic_array.cpp -o main

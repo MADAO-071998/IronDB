@@ -33,3 +33,10 @@ int get(struct DynamicArray *arr, int index) {
 
     return arr->data[index];
 }
+
+void free_array(struct DynamicArray *arr) {
+    free(arr->data);
+    arr->data = NULL;
+    arr->size = 0;
+    arr->capacity = 0;
+}
