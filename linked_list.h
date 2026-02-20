@@ -11,3 +11,5 @@ struct LinkedList {
 void init_list(struct LinkedList* list);
 
 void push_front(struct LinkedList* list, int value);
+
+void push_back(struct LinkedList* list, int value);

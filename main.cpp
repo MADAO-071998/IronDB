@@ -28,9 +28,9 @@ int main() {
 
     init_list(&list);
 
-    push_front(&list, 1);
-    push_front(&list, 2);
-    push_front(&list, 3);
+    push_back(&list, 1);
+    push_back(&list, 2);
+    push_back(&list, 3);
 
     struct Node* current = list.head;
 

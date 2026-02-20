@@ -15,3 +15,23 @@ void push_front(struct LinkedList* list, int value) {
     list->head = new_node;
     list->size++;
 }
+
+void push_back(struct LinkedList* list, int value) {
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    new_node->data = value;
+    new_node->next = NULL;
+
+    if (list->head == NULL) {
+        list->head = new_node;
+    } else {
+        struct Node* current = list->head;
+
+        while (current->next != NULL) {
+            current = current->next;
+        }
+
+        current->next = new_node;
+    }
+
+    list->size++;
+}
