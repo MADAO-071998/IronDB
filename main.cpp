@@ -28,18 +28,22 @@ int main() {
 
     init_list(&list);
 
-    push_back(&list, 1);
-    push_back(&list, 2);
+    push_front(&list, 2);
+    push_front(&list, 1);
+
     push_back(&list, 3);
+    push_back(&list, 4);
 
-    struct Node* current = list.head;
+    print_list(&list);
 
-    while (current != NULL) {
-        printf("%d ", current->data);
-        current = current->next;
-    }
+    // struct Node* current = list.head;
 
-    printf("\n");
+    // while (current != NULL) {
+    //     printf("%d ", current->data);
+    //     current = current->next;
+    // }
+
+    // printf("\n");
 
     return 0;
 }

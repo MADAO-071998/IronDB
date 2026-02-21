@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "linked_list.h"
 
@@ -34,4 +35,15 @@ void push_back(struct LinkedList* list, int value) {
     }
 
     list->size++;
+}
+
+void print_list(struct LinkedList* list) {
+    struct Node* current = list->head;
+
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+
+    printf("\n");
 }
